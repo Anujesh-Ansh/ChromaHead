@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Color Changer",
+  "version": "1.0",
+  "description": "Changes the color of the Headings",
+  "icons": {
+    "48": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ]
+}
